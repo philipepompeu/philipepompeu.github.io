@@ -3,7 +3,7 @@ layout: post
 title: Como eu (quase)automatizei o processo de compilação do Protheus
 ---
 
-Aqui na empresa onde trabalho utilizamos o ERP Microsiga Protheus, e como não poderia deixar de ser, temos muitas customizações.
+Aqui na [empresa onde trabalho](https://github.com/rvimola) utilizamos o ERP Microsiga Protheus, e como não poderia deixar de ser, temos muitas customizações.
 As customizações do Protheus são escritas em [Advpl](http://tdn.totvs.com/x/1YNc), uma linguagem proprietária da Totvs padrão xBase.
 
 ### Os problemas

@@ -1,39 +1,18 @@
 ---
 layout: post
-title: Markdown and HTML
+title: Como eu (quase)automatizei o processo de compilação do Protheus
 ---
 
-Jekyll supports the use of [Markdown](http://daringfireball.net/projects/markdown/syntax) with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.
+Aqui na empresa onde trabalho utilizamos o ERP Microsiga Protheus, e como não poderia deixar de ser, temos muitas customizações.
+As customizações do Protheus são escritas em [Advpl](http://tdn.totvs.com/x/1YNc), uma linguagem proprietária da Totvs padrão xBase.
 
-Tables have also been extended from Markdown:
+### Os problemas
+*Não havia versionamento de fontes, o "controle" era feito de maneira manual e não havia um histórico dessas alterações
+*Para compilar os fontes Advpl era utilizado o antigo IDE DevStudio, uma IDE bem antiga e que a Totvs já esta descontinuando
+*Todo esse processo era feito de maneira manual, então o desenvolvedor precisava pôr o fonte na pasta do projeto do IDE, depois adicionar ao projeto e enfim compilar num ambiente chamado COMPILADOR
+*Após os fontes serem compilados no COMPILADOR, era necessário fazer a troca quente, dessa maneira atualizando todos os arquivos appserver.ini(do master e de todos slaves)
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-Here's an example of an image, which is included using Markdown:
-
-![Geometric pattern with fading gradient](/img/sample_feature_img_2.png)
-
-Highlighting for code in Jekyll is done using Pygments or Rouge. This theme makes use of Rouge by default.
-
-{% highlight js %}
-// count to ten
-for (var i = 1; i <= 10; i++) {
-    console.log(i);
-}
-
-// count to twenty
-var j = 0;
-while (j < 20) {
-    j++;
-    console.log(j);
-}
-{% endhighlight %}
-
-Type Theme uses KaTeX to display maths. Equations such as $$S_n = a \times \frac{1-r^n}{1-r}$$ can be displayed inline.
-
-Alternatively, they can be shown on a new line:
-
-$$ f(x) = \int \frac{2x^2+4x+6}{x-2} $$
+###As soluções encontradas
+*O primeiro passo para otimizar nosso processo de deploy foi utilizarmos o Git como sistema de versionamento. Para isso a empresa assinou o GitHub no plano [TEAM](https://github.com/pricing), dessa maneira conseguimos ter repositórios privados
+*Depois disso, aposentamos o antigo IDE DevStudio e adotamos o novo [TOTVS Developer Studio](http://ds.totvs.com/), que conta com uma [ferramenta de linha de comando](http://tdn.totvs.com/x/ysoGDg)
+Com isso foi possível caminharmos em direção da automatização do deploy

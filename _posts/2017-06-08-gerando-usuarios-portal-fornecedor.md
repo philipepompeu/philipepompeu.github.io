@@ -6,7 +6,7 @@ Aqui na empresa decidimos implantar o Portal do Fornecedor do Protheus para que 
 
 Tivemos a necessidade de gerarmos de maneira automatica o usuario do Portal e enviar suas credenciais por e-mail. Abaixo um exemplo de como fizemos:
 
-```xBase
+```advpl
 //Retorna ou Gera o usuario do Portal para o <cForn + cLoja>
 Static Function GenUsrWb(cForn, cLoja)
 	Local aResult	:= {}

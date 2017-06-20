@@ -3,7 +3,6 @@ layout: post
 title: ExecAuto TMSA410 - Regras de Tributacao
 ---
 Aqui na empresa temos uma integracao com o SisLog da ESL e fazemos atraves dos XMLs dos CTes.
-Como nao existe nenhum exemplo no **TDN**, decidi compartilhar essa implementacao.
 Tivemos a necessidade de gerarmos de maneira automatica a regra de tributacao, para isso utilizei o _ExecAuto_(na verdade trata-se de um fonte **MVC**) do fonte **TMSA410**.
 ```advpl
 /*/{Protheus.doc} GenRgrTrib
@@ -64,4 +63,4 @@ Tivemos a necessidade de gerarmos de maneira automatica a regra de tributacao, p
 	aEval(aAreas,{|x|RestArea(x)})
 Return nil
 ```
-Como nao achei nenhum exemplo no TDN, decidi compartilhar aqui.
+Como nao existe nenhum exemplo no **TDN**, decidi compartilhar essa implementacao.

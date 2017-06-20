@@ -9,7 +9,7 @@ theme_settings:
   title: Philipe Pompeu
   avatar: avatar.jpg
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "Blog pessoal que compartilho coisas legais que eu faco no meu dia a dia" # used by search engines
 
   # Header and footer text
   header_text:

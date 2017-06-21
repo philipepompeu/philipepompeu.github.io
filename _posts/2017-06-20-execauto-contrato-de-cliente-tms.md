@@ -5,7 +5,7 @@ title: ExecAuto TECA250 - Contrato de Cliente
 Aqui na empresa temos uma integracao com o SisLog da ESL e fazemos atraves dos XMLs dos CTes.
 Tivemos a necessidade de gerarmos os contratos dos clientes, para isso utilizei o _ExecAuto_ do fonte **TECA250**.
 
-```advpl
+```xBase
 
 /*/{Protheus.doc} GeraContrt
 	Geracao do Contrato do Cliente
